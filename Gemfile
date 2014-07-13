@@ -39,3 +39,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:x64_mingw, :mingw, :mswin]
 
 gem 'foreigner'
+
+gem 'protected_attributes'
