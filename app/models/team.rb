@@ -3,5 +3,13 @@ class Team < ActiveRecord::Base
   has_many :players
   has_many :contests
   # attributes:
-  attr_accessible :name
+  def create
+    Team.create(team_params)
+  end
+  
+  private
+  
+  def team_params
+    params.require(:name)
+  end
 end
