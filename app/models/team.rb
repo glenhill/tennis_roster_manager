@@ -3,8 +3,17 @@ class Team < ActiveRecord::Base
   has_many :players
   has_many :contests
   # attributes:
+  
+  def new
+    @team = Team.new
+  end
+  
   def create
-    Team.create(team_params)
+    @team = Team.new(team_params)
+    if @team.save
+      redirect_to new_team_path
+    end
+    
   end
   
   private
