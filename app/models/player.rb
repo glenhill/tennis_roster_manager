@@ -10,6 +10,6 @@ class Player < ActiveRecord::Base
   private
   
   def player_params
-    params.require(:name)
+    params.require(:name, :team)
   end
 end
